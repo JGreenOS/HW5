@@ -6,29 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <title>Work Day Scheduler</title>
+  <title>WJulia Green Scheduler</title>
 </head>
-
+<div class="row justify-content-center" id="date-today"></div>
 <body>
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">Scheduling for my work day</p>
-    <p id="currentDay" class="lead"></p>
+    <div class ="row justify-content-center" id = "currentDay"></div>
+    <!--<p id="currentDay" class="lead">Clock here</p> -->
   </header>
   <div class="container">
     <!-- <div class="body-header container-fluid">   -->
 
     <!-- Timeblocks go here -->
-    <div class="row">
-    <div> 7:00am </div>
-    <div form input type="text" id="7am"></div>
-    <div col-2><button class="saveBtn"><i class="fas fa-save"></i></button></div>
+
+    <div id="calendar-row1" class="row justify-content-md-center border-top border-bottom calendar-row">
+    <div id="time1"class="col-md-1">7 AM</div>
+      <textarea rows="3" id="text-entry1" class="col-md-10"></textarea>
+      <button id="save" class="col-md-1 saveBtn"><i class="far fa-save"></i></button>
     </div>
-</div>
+
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
