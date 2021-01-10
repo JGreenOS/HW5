@@ -6,28 +6,45 @@ console.log(day);
 $("#currentDay").text(day);
  
 
-//--------------------------------------------------------------
-//here I need to capture data from form when save button is clicked on only the line the button was clicked. Do I use JQuery or Javascript here?  JQ is better when using event listeners.
-
 $(".saveBtn").on("click", function () {
 
 var textAreaInfo = $(this).parent().find("textarea").val();
 var divTimeAttr = $(this).parent().find("div").attr("id");
-
 localStorage.setItem(divTimeAttr, textAreaInfo);
-
-  //this is going with the save button
-
 })
 
-
 })
-
-
-
 
 var time1TextAreaVal = localStorage.getItem("time1");  //value from local storage
 $("#text-entry1").val(time1TextAreaVal);
+
+var time2TextAreaVal = localStorage.getItem("time2");  //value from local storage
+$("#text-entry2").val(time2TextAreaVal);
+
+var time3TextAreaVal = localStorage.getItem("time3");  //value from local storage
+$("#text-entry3").val(time3TextAreaVal);
+
+var time4TextAreaVal = localStorage.getItem("time4");  //value from local storage
+$("#text-entry4").val(time4TextAreaVal);
+
+var time5TextAreaVal = localStorage.getItem("time5");  //value from local storage
+$("#text-entry5").val(time5TextAreaVal);
+
+var time6TextAreaVal = localStorage.getItem("time6");  //value from local storage
+$("#text-entry6").val(time6TextAreaVal);
+
+var time7TextAreaVal = localStorage.getItem("time7");  //value from local storage
+$("#text-entry7").val(time7TextAreaVal);
+
+var time8TextAreaVal = localStorage.getItem("time8");  //value from local storage
+$("#text-entry8").val(time8TextAreaVal);
+
+var time9TextAreaVal = localStorage.getItem("time3");  //value from local storage
+$("#text-entry9").val(time9TextAreaVal);
+
+var time10TextAreaVal = localStorage.getItem("time10");  //value from local storage
+$("#text-entry10").val(time10TextAreaVal);
+
 
 
 const findTime = document.querySelectorAll(".col-md-1")
@@ -37,13 +54,10 @@ for (var i=0; i < findTime.length; i++) {
 
 }
 
+
 //next is to convert clickTime to the same format at current time
 //compare using if statements
 
-
-
-
-// //---------------------------------------------------------
 
 // //here I need to change the class of the row to the class of .present for the present time
 // var currentTime = moment(hh);
