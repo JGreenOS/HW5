@@ -4,7 +4,9 @@ $(document).ready(function() { //make sure the page doesn't do funky stuff
 const day = moment().format("dddd, MMMM DD, YYYY hh:mm a");
 console.log(day);
 $("#currentDay").text(day);
+ 
 
+//--------------------------------------------------------------
 //here I need to capture data from form when save button is clicked on only the line the button was clicked. Do I use JQuery or Javascript here?
 
 when the save button is clicked on this HTMLTableRowElement
@@ -19,19 +21,24 @@ localStorage.getItem(time1, text-entry1) and put it on text-entry1
 var time = moment(hh);
 console.log("It is" + time);
 
+//---------------------------------------------------------
+
 //here I need to change the class of the row to the class of .present for the present time
 var currentTime = moment(hh);
 if currentTime === document.getElementById(time1)
 change the class to .present
 
+//getElementById "calendar-row1".classList.replace('future', 'present')
 
+//------------------------------------------------------
 
 //here I need to change the class of the row to the class of .past when the time is after right now.
 
 if currentTime > document.getElementById(time1)
 change the class to .past
+//getElementById "calendar-row1".classList.replace(
 
-
+//---------------------------------------------------------
 //here I need to change the class of the row to the class of .future when the time is not yet.
 
 if currentTime < document.getElementById(time1)
@@ -40,6 +47,8 @@ change class to .future
 
 }
 )
+
+//---------------------------------------------------------
 //these rows are sample code to help figure out the syntax
 // $(document).ready(function() {
 //     // listen for save button clicks
