@@ -42,10 +42,6 @@ $("#text-entry8").val(time8TextAreaVal);
 var time9TextAreaVal = localStorage.getItem("time3");  //value from local storage
 $("#text-entry9").val(time9TextAreaVal);
 
-var time10TextAreaVal = localStorage.getItem("time10");  //value from local storage
-$("#text-entry10").val(time10TextAreaVal);
-
-
 
 const findTime = document.querySelectorAll(".col-md-1")
 for (var i=0; i < findTime.length; i++) {
@@ -54,51 +50,32 @@ for (var i=0; i < findTime.length; i++) {
 
 }
 
+function hourUpdater() {
+  // get current number of hours
+  var currentHour = moment().hours();
+  console.log(currentHour);
 
-//next is to convert clickTime to the same format at current time
-//compare using if statements
+  // loop over time blocks
+  $(".calendar-row").each(function() {
+    //var blockHour = parseInt($(this).attr("id").split("-")[1]);
+  var blockHour = 9;
+    // check if we've moved past this time
+    if (blockHour < currentHour) {
+      $(this).addClass("past");
+    } 
+    else if (blockHour === currentHour) {
+      $(this).removeClass("past");
+      $(this).addClass("present");
+    } 
+    else {
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+      $(this).addClass("future");
+    }
+  });
+}
+hourUpdater();
 
-
-// //here I need to change the class of the row to the class of .present for the present time
-// var currentTime = moment(hh);
-// if currentTime === document.getElementById(time1)
-// change the class to .present
-
-// //getElementById "calendar-row1".classList.replace('future', 'present')
-
-// //------------------------------------------------------
-
-// //here I need to change the class of the row to the class of .past when the time is after right now.
-
-// if currentTime > document.getElementById(time1)
-// change the class to .past
-// //getElementById "calendar-row1".classList.replace(
-
-// //---------------------------------------------------------
-// //here I need to change the class of the row to the class of .future when the time is not yet.
-
-// if currentTime < document.getElementById(time1)
-// change class to .future
-
-
-// }
-// )
-
-// //---------------------------------------------------------
-// //these rows are sample code to help figure out the syntax
-// // $(document).ready(function() {
-// //     // listen for save button clicks
-// //     $(".saveBtn").on("click", function() {
-// //       // get nearby values
-// //       var value = $(this).siblings(".description").val();
-// //       var time = $(this).parent().attr("id");
-  
-// //       // save in localStorage
-// //       localStorage.setItem(time, value);
-// //     });
-
-// // var saveBtn = $('.saveBtn');
-// // saveBtn.on('click', function(){
-// //     let eventId = $(this).attr('id');
-// //     let eventText = $(this).parent().siblings().children('.event').val();
-// //     localStorage.setItem(eventId, eventText)
+// set up interval to check if current time needs to be updated
+var interval = setInterval(hourUpdater, 15000);
+console.log(interval);
