@@ -48,17 +48,23 @@ for (var i=0; i < findTime.length; i++) {
     var clickTime = findTime[i].textContent
     console.log(clickTime);
 
+
 }
+
+moment().isBefore(clickTime);
 
 function hourUpdater() {
   // get current number of hours
-  var currentHour = moment().hours();
-  console.log(currentHour);
+  // var currentHour = moment().hours();
+  // console.log(currentHour);
+  // var now = currentHour > (this)moment();
+
 
   // loop over time blocks
   $(".calendar-row").each(function() {
-    //var blockHour = parseInt($(this).attr("id").split("-")[1]);
-  var blockHour = 9;
+    var blockHour = parseInt($(this).attr("id").split("-")[1]);  
+    
+
     // check if we've moved past this time
     if (blockHour < currentHour) {
       $(this).addClass("past");
