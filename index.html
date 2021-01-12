@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!--setting for device width; set bootstrap for stylesheet, pull fontawesome for save button font, link to internal style sheet -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -11,6 +12,8 @@
   <link rel="stylesheet" href="style.css" />
   <title>Julia Green Scheduler</title>
 </head>
+
+<!--setting current date and the header of the page -->
 <div class="row justify-content-center" id="date-today"></div>
 
 <body>
@@ -18,17 +21,15 @@
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">Scheduling for my work day</p>
     <div class="row justify-content-center" id="currentDay"></div>
-    <!--<p id="currentDay" class="lead">Clock here</p> -->
   </header>
+
+  <!--timeblocks for times of day, text blocks and save button-, in this example the day starts at 7am and ends at 3pm -->
   <div class="container">
     <div class="body-header container-fluid">
-
-      <!-- Timeblocks go here -->
-
       <div id="calendarrow-7" class="row justify-content-md-center border-top border-bottom calendar-row">
         <div id="time1" class="col-md-1">7 AM</div>
         <textarea rows="3" id="text-entry1" class="col-md-10 description"></textarea>
-        <button id = "1" class="col-md-1 saveBtn">Click to Save<i class="far fa-save"></i></button>
+        <button id="1" class="col-md-1 saveBtn">Click to Save<i class="far fa-save"></i></button>
       </div>
 
       <div id="calendarrow-8" class="row justify-content-md-center border-top border-bottom calendar-row">
@@ -78,14 +79,14 @@
         <textarea rows="3" id="text-entry9" class="col-md-10"></textarea>
         <button class="col-md-1 saveBtn">Click to Save<i class="far fa-save"></i></button>
       </div>
-
-     
     </div>
   </div>
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-      <script src="script.js"></script>
+
+
+  <!-- scripts for the app -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
