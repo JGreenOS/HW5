@@ -1,9 +1,12 @@
+
+/* body for font/font size */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
+/* setting text area and initial color */
 textarea{
   background: transparent;
   border: none;
@@ -13,6 +16,7 @@ textarea{
   padding: 10px;
 }
 
+/* jumbotron and header information */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -20,16 +24,18 @@ textarea{
   border-radius: 0;
   border-bottom: 10px solid black;
 }
-
+/* description used in the textarea */
 .description{
   white-space: pre-wrap;
 }
 
+/* sets initial time block to center */
 .time-block{
   text-align: center;
   border-radius: 15px;
   
 }
+/* Sets all divs for consistency */
 .div {
   column-count: 3;
   column-gap: 40px;
@@ -38,6 +44,7 @@ textarea{
   column-rule-color: black;
 }
 
+/* sets all rows for consistent height and borders */
 .row {
   white-space: pre-wrap;
   height: 80px;
@@ -45,27 +52,31 @@ textarea{
   
 }
 
+/* hour font left column */
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
+/* color change for the past event */
 .past {
   background-color: #d3d3d3;
   color: white;
 }
-
+ /* color change for the present time event */
 .present {
   background-color: #ff6961;
   color: white;
 }
 
+/* color change for the future time event */
 .future {
   background-color: #77dd77;
   color: white;
 }
 
+/* standardized save button */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -74,6 +85,7 @@ textarea{
   color: white;
 }
 
+/* hover behavior for save button */
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
