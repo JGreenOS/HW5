@@ -15,6 +15,8 @@ This learning activity was a challenge in differentiating between javascript and
 
 Next development steps include a multi-day scheduler, an indicator of the meeting/event type and/or audible alerts to remind the user. 
 
+I re-used sample code for the logic in the Javascript to set the colors in the rows according to the time of day. In addition, I customized the save button for a user who might not understand the icon itself.
+
 
 ## User Story
 
