@@ -1,6 +1,6 @@
 ## Work Day Scheduler
 
-Screenshot here
+https://github.com/JGreenOS/HW5/blob/master/screenshot.png
 
 Link to deployed code: 
 
