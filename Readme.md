@@ -9,13 +9,12 @@ Link to deployed code:
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 ## Developer Comments
-```
+
 
 This learning activity was a challenge in differentiating between javascript and JQuery.  The moment.js library was used for the time component and configured to use 24 hour time for ease in calculation.
 
 Next development steps include a multi-day scheduler, an indicator of the meeting/event type and/or audible alerts to remind the user. 
 
-```
 
 ## User Story
 
